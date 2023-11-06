@@ -57,12 +57,13 @@ REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
 CITATION_URL: Optional[str] = "https://link.springer.com/chapter/10.1007/978-981-15-7031-5_103"
 AUTHORS: Optional[List[str]] = ["Karthika N. J.", "Chandran Saravanan"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["karthika.nj@gmail.com"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["National Institute of Technology, India"]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.nitt.edu/academics/departments/cse"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__": "Also, the dataset includes ***pose*** object tag. Explore them in supervisely advanced labeling tool"}
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__": "Also, objects in the dataset have ***pose*** tag. Explore them in the supervisely labeling tool"}
 TAGS: Optional[List[str]] = None
 
 
@@ -110,6 +111,7 @@ def get_settings():
     settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
